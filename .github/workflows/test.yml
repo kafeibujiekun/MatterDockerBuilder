@@ -19,7 +19,7 @@ jobs:
 
       - name: Pull Docker Images and Package
         run: |
-          docker save my-app:latest -o my-app-latest.tar"
+          docker save my-app:latest -o my-app-latest.tar
 
       - name: Compress the TAR files
         run: tar -czf my-app-images.tar.gz my-app-latest.tar
