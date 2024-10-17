@@ -14,8 +14,8 @@ jobs:
 
       - name: Pull Docker Images and Package
         run: |
-          docker pull ubuntu:22.04 --platform "linux/arm64"
-          docker save ubuntu:22.04 -o ubuntu-22.04-arm64.tar"
+          docker pull ubuntu:latest --platform "linux/arm64"
+          docker save ubuntu:latest -o ubuntu-latest-arm64.tar"
 
       - name: Compress the TAR files
         run: tar -czf arm64-images.tar.gz *-arm64.tar
