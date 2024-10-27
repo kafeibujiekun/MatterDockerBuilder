@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-c"]
 
 RUN set -x \
     && cd /root \
-    && git clone https://github.com/project-chip/connectedhomeip.git \
+    && git clone -b v1.4-branch https://github.com/project-chip/connectedhomeip.git \
     && cd connectedhomeip \
     && ./scripts/checkout_submodules.py --shallow --platform  linux \
     && : # last line
