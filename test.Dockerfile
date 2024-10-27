@@ -1,5 +1,7 @@
 FROM ghcr.io/project-chip/chip-build:54
 
+SHELL ["/bin/bash", "-c"]
+
 RUN set -x \
     && cd /root \
     && git clone https://github.com/project-chip/connectedhomeip.git \
