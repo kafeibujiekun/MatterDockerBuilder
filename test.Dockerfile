@@ -6,12 +6,12 @@ RUN set -x \
     && cd /root \
     && git clone -b v1.4-branch https://github.com/project-chip/connectedhomeip.git \
     && cd connectedhomeip \
-    && ./scripts/checkout_submodules.py --shallow --platform  linux \
+    && ./scripts/checkout_submodules.py --allow-changing-global-git-config --shallow --platform linux \
     && : # last line
 
 RUN set -x \
     && cd /root/connectedhomeip \
-    && source scripts/activate.sh \
+    && bash scripts/bootstrap.sh \
     && : # last line
 
 RUN set -x \
